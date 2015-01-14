@@ -21,5 +21,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec"
   s.add_development_dependency "sqlite3", '~> 1.3.9'
-  gem.add_runtime_dependency 'gem_config'
+  s.add_runtime_dependency 'gem_config'
 end

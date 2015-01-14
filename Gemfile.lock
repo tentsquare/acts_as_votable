@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     acts_as_votable (0.10.0)
+      gem_config
 
 GEM
   remote: https://rubygems.org/
@@ -37,6 +38,7 @@ GEM
     builder (3.0.4)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    gem_config (0.3.1)
     hike (1.2.3)
     i18n (0.7.0)
     journey (1.0.4)
