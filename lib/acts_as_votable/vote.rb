@@ -4,10 +4,6 @@ module ActsAsVotable
   class Vote < ::ActiveRecord::Base
     include Helpers::Words
 
-    def initialize
-      self.table_name = ActsAsVotable.configuration.table_name
-    end
-
     if defined?(ProtectedAttributes) || ::ActiveRecord::VERSION::MAJOR < 4
       attr_accessible :votable_id, :votable_type,
                       :voter_id, :voter_type,
