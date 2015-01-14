@@ -1,6 +1,7 @@
 class ActsAsVotableMigration < ActiveRecord::Migration
   def self.up
-    table_name = Settings.acts_as_votable.table_name rescue :votes
+    table_name = ActsAsVotable.configuration.table_name
+
     create_table table_name do |t|
 
       t.references :votable, :polymorphic => true

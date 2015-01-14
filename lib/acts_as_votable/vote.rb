@@ -2,7 +2,7 @@ require 'acts_as_votable/helpers/words'
 
 module ActsAsVotable
   class Vote < ::ActiveRecord::Base
-    table_name = Settings.acts_as_votable.table_name rescue "votes"
+    self.table_name = ActsAsVotable.configuration.table_name
     include Helpers::Words
 
     if defined?(ProtectedAttributes) || ::ActiveRecord::VERSION::MAJOR < 4
